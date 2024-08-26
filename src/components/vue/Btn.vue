@@ -24,7 +24,7 @@ const emits = defineEmits(["click", "btn-click"]);
 const clickAction = () => emits("click", "btn-click");
 
 const bgColorComputed = computed(() =>
-  disabledRef.value ? "primaryMedium" : color
+  disabledRef.value ? "disabled" : color
 );
 
 const textColorComputed = computed(() =>

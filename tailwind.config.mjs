@@ -12,6 +12,7 @@ module.exports = {
         tertiary: "#f6dbdb",
         backgroundDarker: "#f8f4e4",
         background: "hsl(0, 0%, 88%)",
+        disabled: "hsl(0, 0%, 68%)",
         dark: "#414141",
         light: "#fff",
         menuLight: "#b0cf76",
@@ -32,6 +33,7 @@ module.exports = {
     "bg-backgroundDarker",
     "bg-dark",
     "bg-menu",
+    "bg-disabled",
   ],
   plugins: [require("@tailwindcss/forms")],
 };

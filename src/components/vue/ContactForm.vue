@@ -61,7 +61,7 @@ export default {
         } catch (error) {
           console.error(error);
           this.error =
-            "Une erreur s'est produite... N'hésitez pas à me contacter par Instagram ! Merci pour votre patience :) .";
+            "Une erreur s'est produite... N'hésitez pas à me contacter par téléphone ! Merci pour votre patience :) .";
         }
       } else {
         this.error = "Veuillez remplir tous les champs s'il vous plait.";
@@ -139,7 +139,7 @@ export default {
             <div class="flex">
               <Btn
                 @click="sendMessage"
-                color="primary"
+                textColor="secondary"
                 typeButton="button"
                 
                 :disabled="!isFormCompleted"
