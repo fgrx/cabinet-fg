@@ -7,10 +7,9 @@ import Footer from "../components/Footer.astro";
 
 export interface Props {
   title: string;
-  ogImage?:String;
 }
 
-const { title, ogImage } = Astro.props;
+const { title } = Astro.props;
 
 const fonts =
   "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rufina:wght@400;700&display=swap";
@@ -34,12 +33,12 @@ const fonts =
     />
     } -->
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href={fonts}
       media="print"
       onload="this.media='all'"
-    />
+    /> -->
 
     
     <title>{title}</title>

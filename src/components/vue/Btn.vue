@@ -1,24 +1,19 @@
-<script setup>
+<script lang="ts" setup>
 import { computed, toRef } from "vue";
 
-const props = defineProps({
-  color: { type: String, default: "primary" },
-  textColor: {
-    type: String,
-    default: "white",
-  },
-  typeButton: {
-    type: String,
-    default: "button",
-  },
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-  to: {
-    type: String,
-    default: "#",
-  },
+interface Props {
+  color?: string;
+  textColor?: string;
+  disabled?: boolean;
+  to?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  color: "primary",
+  textColor: "white",
+  typeButton: "button",
+  disabled: false,
+  to: "#",
 });
 
 const { color, textColor, typeButton, to } = props;
