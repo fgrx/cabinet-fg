@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Consultations",
+    "url": "/consultations"
+  },
+  {
+    "title": "Votre thérapeute",
+    "url": "/therapeute"
+  },
+  {
+    "title": "Mentions légales",
+    "url": "/mentions-legales",
+    "display": "hide-for-large"
+  },
+  {
+    "title": "Charte & conditions d'utilisation",
+    "url": "/cgu",
+    "display": "hide-for-large"
+  }
+]

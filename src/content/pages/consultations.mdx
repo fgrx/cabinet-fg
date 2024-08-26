@@ -1,0 +1,85 @@
+---
+title: "Prendre rendez-vous"
+slug: "consultations"
+---
+
+import { Image } from "astro:assets";
+import ContactForm from "../../components/vue/ContactForm.vue";
+import Btn from "../../components/vue/Btn.vue";
+import GallerieCabinet from "../../components/GallerieCabinet.astro";
+import cabinet from "../../assets/img/cabinet2.jpg";
+
+# Consultations
+
+<section>
+    ## Les séances
+
+    Mon cabinet est ouvert de 09h00 à 19h00 les mardis et mercredis en présentiel et le jeudi en visio.
+
+    Les séances durent entre 50 et 55 minutes au tarif unique de 65€.
+
+    Le règlement se fait par chèque, espèces ou virement bancaire. <u>La carte bancaire n'est pas acceptée</u>.
+
+    ### Comment se passent les séances ?
+
+    Elles débutent par une phase d'entretien qui permettra de cerner votre problème et de définir un objectif concret à travailler. Puis, nous allons travailler ensemble pour mobiliser vos ressources que ce soit avec l'hypnose ou la thérapie Mosaic.
+
+    Avant de prendre rendez-vous, je vous invite à consulter ma charte et conditions d'utilisations.
+
+    <a href="/cgu"><Btn>☑️ Charte & Conditions d'utilisation</Btn></a>
+
+    ### Est-ce que les séances sont remboursées ?
+
+    Certaines mutuelles prennent en charge plusieurs séances. Renseignez-vous auprès de votre mutuelle.
+
+</section>
+
+<section>
+<div class="md:flex md:flex-row-reverse">
+
+  <div class=" basis-1/2">
+    <section>
+        ## Le cabinet
+
+        Le cabinet se situe au  <br />
+        314 rue philippe Tassier  <br />
+        38460 Optevoz
+
+        Grand parking proche du cabinet pour se garer
+
+        <a target="blank" href="https://maps.app.goo.gl/rpR79EcrKhqVzvNV7">
+          <Btn>📍Voir sur Google Maps</Btn>
+        </a>
+
+      </section>
+
+  </div>
+
+  <div class="basis-1/2 pt-10 pr-4">
+    <Image class="object-cover w-full rounded-lg" src={cabinet} format="webp" alt="Photo du cabinet" />
+  </div>
+</div>
+
+</section>
+
+<section>
+  <div class="md:flex mt-10">
+    <div class=" basis-1/2">
+          ## Prendre rendez-vous par mail
+
+          <ContactForm client:load />
+    </div>
+
+    <div class="basis-1/2 md:pl-12">
+      ## Prendre rendez-vous par téléphone
+
+        Vous pouvez me contacter au 07.66.83.65.71.
+
+        <a href="tel:07.66.83.65.71">
+          <Btn>📞 Me téléphone ou m'envoyer un SMS</Btn>
+        </a>
+
+    </div>
+
+  </div>
+</section>

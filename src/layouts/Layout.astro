@@ -1,0 +1,100 @@
+---
+import "../styles/global.scss";
+import NavBar from "../components/vue/NavBar.vue";
+import menus from "../content/config/menu.json";
+import generalInfos from "../content/config/general.json"
+import Footer from "../components/Footer.astro";
+
+export interface Props {
+  title: string;
+  ogImage?:String;
+}
+
+const { title, ogImage } = Astro.props;
+
+const fonts =
+  "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rufina:wght@400;700&display=swap";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href={fonts} rel="preload" as="style" />
+
+    <!-- {ogImage && <meta
+      property="”og:image”"
+      content=`https://tangobucolico.com${ogImage}`
+    />
+    } -->
+
+    <link
+      rel="stylesheet"
+      href={fonts}
+      media="print"
+      onload="this.media='all'"
+    />
+
+    
+    <title>{title}</title>
+  </head>
+  <body class="bg-background text-dark">
+
+    <NavBar client:load siteUrl="/" menus={menus} generalInfos={generalInfos} />
+    <slot />
+
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  .title-site {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size:1.2em;
+  }
+
+  .subtitle-site {
+    font-family: "Lora";
+    font-weight:normal;
+  }
+
+  .menu-site li{
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-weight:lighter;
+    font-size:1.2em;
+  }
+
+  body {
+    font-family: "Average Sans" !important;
+    color: rgb(69, 69, 69) !important;
+    font-size: 1.2em !important;
+  }
+
+  h1,
+  .title {
+    font-family: "rufina" !important;
+  }
+
+  h2 {
+    font-family: "rufina" !important;
+    font-weight: bold !important;
+    margin-bottom: 0.1em !important;
+    line-height: 1em !important;
+  }
+
+  h3 {
+    font-family: "rufina" !important;
+    font-weight: bold !important;
+    margin-top: 0.5em v;
+    line-height: 1em !important;
+  }
+</style>

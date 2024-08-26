@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import general from "../content/config/general.json"
+
+import Banner from "../components/home/Banner.astro"
+import Services from "../components/home/Services.astro"
+import Resume from "../components/home/Resume.astro"
+import Hypnose from "../components/home/Hypnose.astro"
+import Mosaic from "../components/home/Mosaic.astro"
+import Presentation from "../components/home/Presentation.astro"
+
+const titlePage = `${general.title} - ${general.subtitle}`
+---
+
+<Layout title={titlePage}>
+	<main>
+		<Banner />
+
+		<Services />
+
+		<Hypnose /> 
+
+		<Mosaic /> 
+
+		<Resume />
+
+		<Presentation />
+
+	</main>
+</Layout>
+
+<style>
+
+</style>

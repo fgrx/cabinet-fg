@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import imageHypnose from "../../assets/img/hypnose.jpg"
+---
+<section>
+
+    <div class="container mx-auto md:flex md:flex-row-reverse mt-20 mb-16 items-center">
+
+        <div class="md:-ml-12 basis-1/2">
+            <!-- <Image class="-rotate-3 border-4 border-white" src={imageHypnose} height="600" format="webp" alt="Thérapie Mosaic" />  -->
+            <Image class="mx-auto md:mx-0 xs:h-64 w-auto rotate-3 border-4 border-white" src={imageHypnose} height="400" format="webp" alt="Thérapie Mosaic" /> 
+        </div>
+
+
+        <div class="bg-primary text-white px-4 -mt-4 py-8 my-8 md:px-16 md:-ml-8">
+            <h2 class="text-4xl pb-2">Hypnose ériksonienne</h2>
+            <p>Je suis certifié Maître praticien en hypnose éricksonienne. A l'opposée du monde du spectacle, elle est issue des découvertes de l'un des plus grand thérapeute du XXème siècle : Milton Erickson.</p>
+            <p>L'hypnose éricksonienne me permet de vous accompagner pour mobiliser vos ressources et vous aider à résoudre vos problèmes et blocages. Elle est particulièrement indiquée pour les problèmes de :
+                <ul>
+                    <li>Confiance en soi</li>
+                    <li>Addictions</li>
+                    <li>Atteinte d'objectifs</li>
+                    <li>Phobies & peurs</li>
+                    <li>Deuils</li>
+                    <li>Régulation des émotions</li>
+                    <li>Compréhension</li>
+                </ul>
+            </p>
+        </div>
+
+    </div>
+
+</section>

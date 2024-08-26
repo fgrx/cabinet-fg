@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import cabinet1 from "../assets/img/cabinet1.jpg";
+import cabinet2 from "../assets/img/cabinet2.jpg";
+import cabinet3 from "../assets/img/cabinet3.jpg";
+
+const content = [cabinet1,cabinet2,cabinet3]
+---
+<div class="  my-6 py-6">
+
+  <div class="md:flex flex-row gap-4">
+    {
+      content.map((item) => (
+        <div class="flex-1">
+          <Image
+            class="object-cover h-96 w-full rounded-lg"
+            src={item}
+            width={450}
+            height={300}
+            format="webp"
+            alt=""
+          />
+
+        </div>
+      ))
+    }
+  </div>
+</div>
+

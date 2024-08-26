@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import image1 from "../../assets/img/cigarette.jpg"
+import image2 from "../../assets/img/funambule.jpg"
+import image3 from "../../assets/img/target.jpg"
+import image4 from "../../assets/img/walk.jpg"
+
+---
+
+<section class="bg-secondary text-light">
+    <div class="container mx-auto px-2 py-12">
+    <h2 class="text-3xl text-center">Je vous accompagne pour : </h2>
+
+    <div class="mt-8 gap-12 grid grid-cols-2 md:grid-cols-4">
+        <div class="text-center my-4">
+            <Image src={image1} alt="cigarette" height="150" width="150" format="webp" class="rounded-full border-4 border-white mx-auto" loading="lazy" />
+            <h3 class="text-2xl mt-2">Les addictions</h3>
+            <p>à des substances ou à des comportements</p>
+        </div>
+
+
+        <div class="text-center my-4">
+            <Image src={image2} alt="cigarette" height="150" width="150" format="webp" class="rounded-full border-4 border-white mx-auto" loading="lazy" />
+            <h3 class="text-2xl mt-2">Surmonter ses peurs</h3>
+            <p>Que vous ayez des phobies ou des blocages</p>
+        </div>
+
+
+        <div class="text-center my-4">
+            <Image src={image3} alt="cigarette" height="150" width="150" format="webp" class="rounded-full border-4 border-white mx-auto" loading="lazy" />
+            <h3 class="text-2xl mt-2">Atteindre vos objectifs</h3>
+            <p>Sportifs, reconversion professionnelle</p>
+        </div>
+
+        <div class="text-center my-4">
+            <Image src={image4} alt="cigarette" height="150" width="150" format="webp" class="rounded-full border-4 border-white mx-auto" loading="lazy" />
+            <h3 class="text-2xl mt-2">Appaiser vos traumas</h3>
+            <p>Laisser le passé derrière soi pour avancer</p>
+        </div>
+
+        </div>
+    </div>
+
+</section>

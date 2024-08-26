@@ -1,0 +1,23 @@
+---
+import {Image} from "astro:assets"
+import banner from "../../assets/img/banner.JPG"
+import Btn from "../vue/Btn.vue"
+import Citation from "../Citation.astro"
+---
+<section>
+    <div class="relative">
+        <div class="absolute flex h-full w-full items-center z-10">
+            <div class=" md:basis-1/2 lg:basis-1/2 mx-4 md:mx-auto -mt-24">
+                <Citation class="mx-4">L'hypnose c'est faire autrement
+                    <Fragment slot="author">Dr Henri Bensoussan</Fragment>
+                </Citation>
+                <div class="mt-6 text-center md:text-left"><a href="/consultations"><Btn color="secondary">Prendre rendez-vous</Btn></a></div>
+                
+            </div>
+        </div>
+
+        <div class="w-full banner bg-primary h-banner">
+            <Image class="image-banner" src={banner} width="1400" format="webp" alt="Regarde le cabinet" class="object-cover h-full w-full"/>
+        </div>
+    </div>
+</section>
