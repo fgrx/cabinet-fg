@@ -6,16 +6,18 @@ import Btn from "../../components/vue/Btn.vue"
 
 <section>
     <div class="container mx-auto md:flex md:flex-row-reverse px-2 py-14">
-        <div>
-            <Image class=" rounded-full" src={imagePortrait} alt="Portrait Fabien Grignoux" width="800" format="webp" />
+        <div class="mb-4 basis-1/3">
+            <Image class="mx-auto text-center rounded-full" src={imagePortrait} alt="Portrait Fabien Grignoux" width="450" format="webp" />
         </div>
 
-        <div>
-            <h2 class="text-4xl pb-3">Faisons les présentations</h2>
+        <div class="basis-2/3">
+            <h2 class="text-3xl md:text-4xl text-center md:text-left pb-3">Faisons les présentations</h2>
             <p>J'ai trouvé dans l'hypnose un moyen formidable d'aider les personnes que j'accompagne à mobiliser les ressources en elles pour avancer.</p>
             <p>En formation constante, je cherche à proposer des séances à la pointe des découvertes récentes en matière de psychothérapie. Dans un but d'amélioration de ma pratique, je suis aussi supervisé pour débloquer les situations les plus complexes.</p>
-            <div class="text-center mt-8"><a href='/consultations'>
-                <Btn>Prendre rendez-vous</Btn></a></div>
+            
+            <div class="md:flex gap-3  justify-center mt-6 text-center">
+                <a href='/therapeute'><Btn>En savoir plus</Btn></a>
+                <a href="/consultations"><Btn color="secondary">Prendre rendez-vous</Btn></a>  
         </div>
 
     </div>

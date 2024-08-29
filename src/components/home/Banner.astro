@@ -1,6 +1,8 @@
 ---
-import {Image} from "astro:assets"
-import banner from "../../assets/img/banner.jpeg"
+import { Source } from "@unpic/astro";
+import { Image } from "astro:assets";
+import banner from "../../assets/img/banner.jpg"
+import bannerPortrait from "../../assets/img/banner-portrait.jpg"
 import Btn from "../vue/Btn.vue"
 import Citation from "../Citation.astro"
 ---
@@ -17,7 +19,26 @@ import Citation from "../Citation.astro"
         </div>
 
         <div class="w-full banner bg-primary h-banner">
-            <Image class="image-banner" src={banner} width="1400" format="webp" alt="Regarde le cabinet" class="object-cover h-full w-full"/>
-        </div>
+
+            <picture class="image-banner">
+                <!-- Small screens get a constrained square image -->
+                <Source
+                    src={bannerPortrait}
+                    media="(max-width: 600px)"
+                    width={600}
+                    height={600}
+                />
+                <!-- Always include an Image as the final element -->
+                <Image
+                    src={banner}
+                    width={1400}
+                    alt="Aurora"
+                    format="webp"
+                    alt="Image du"
+                    class="object-cover w-full h-full"
+                />
+            </picture>
+
+           </div>
     </div>
 </section>
