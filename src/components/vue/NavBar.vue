@@ -117,7 +117,7 @@ onMounted(() => {
           <li
             v-for="(menu, index) in menus"
             :key="index"
-            class="text-xl py-2 px-2 text-center list-none"
+            class="text-xl py-4 px-2 text-center list-none"
             @click="isOpen = false"
           >
             <a :href="menu.url">{{ menu.title }}</a>
