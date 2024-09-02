@@ -10,6 +10,7 @@ module.exports = {
         primary: "#03828C",
         secondary: "#c95b34",
         tertiary: "#f6dbdb",
+        lightBtn: "#fff",
         backgroundDarker: "#f8f4e4",
         background: "hsl(0, 0%, 88%)",
         disabled: "hsl(0, 0%, 68%)",
@@ -34,6 +35,9 @@ module.exports = {
     "bg-dark",
     "bg-menu",
     "bg-disabled",
+    "bg-lightBtn",
+    "text-primary",
+    "text-secondary",
   ],
   plugins: [require("@tailwindcss/forms")],
 };

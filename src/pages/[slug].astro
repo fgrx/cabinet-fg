@@ -24,7 +24,7 @@ export const getStaticPaths = (async() => {
 const { Content } = Astro.props.page;
 const { title, imgSrc } = Astro.props.page.frontmatter;
 
-let imageBanner:Promise<{ default: ImageMetadata; }>|false = false;
+let imageBanner:Promise<{ default: ImageMetadata; }>;
 
 if(imgSrc){
   const images = import.meta.glob("../assets/img/*");
@@ -32,6 +32,7 @@ if(imgSrc){
   const imageFound = images[imageToFind]();
   imageBanner = imageFound as Promise<{ default: ImageMetadata; }>;
 }
+
  
 ---
 
@@ -40,10 +41,14 @@ if(imgSrc){
     <div class="container mx-auto px-2 py-6">
       <h1>{title}</h1>
       
-      {imgSrc && (<div class="h-80">
-        <Image class="object-cover w-full h-full" src={imageBanner}  format="webp" width="1400" height="400" alt="illustration de l'article" />
-      </div>)
+      {
+        ()=>{
+          if(imageBanner){
+            return <Image class="object-cover w-full h-full" src={imageBanner}  format="webp" width="1400" height="400" alt="illustration de l'article" />
+          }
+        }
       }
+      
       <Content />
     </div>
   </article>
