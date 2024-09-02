@@ -139,7 +139,7 @@ export default {
             <div class="flex">
               <Btn
                 @click="sendMessage"
-                textColor="secondary"
+                textColor="light"
                 typeButton="button"
                 
                 :disabled="!isFormCompleted"

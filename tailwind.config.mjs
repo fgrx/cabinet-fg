@@ -38,6 +38,7 @@ module.exports = {
     "bg-lightBtn",
     "text-primary",
     "text-secondary",
+    "text-light",
   ],
   plugins: [require("@tailwindcss/forms")],
 };
