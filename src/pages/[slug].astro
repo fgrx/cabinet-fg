@@ -44,18 +44,24 @@ if(imgSrc){
       {
         ()=>{
           if(imageBanner){
-            return <Image class="object-cover w-full h-full" src={imageBanner}  format="webp" width="1400" height="400" alt="illustration de l'article" />
+            return <div class="h-80"><Image class="object-cover w-full h-full" src={imageBanner}  format="webp" width="1400" height="400" alt="illustration de l'article" /></div>
           }
         }
       }
-      
+
       <Content />
     </div>
   </article>
 </Layout>
 
 <style is:global>
-  h1{font-size:3em; font-weight: bolder;}
+  h1{font-size:2.5em; font-weight: bolder;}
   h2{font-size:2em;margin-top:1em;}
   h3{font-size:1.5em;margin-bottom:.5em;margin-top:.7em}
+
+  @media only screen and (max-width: 600px) {
+    h1{font-size:2em; font-weight: bolder;}
+    h2{font-size:1.6em;margin-top:1em;}
+    h3{font-size:1.3em;margin-bottom:.5em;margin-top:.7em}
+  }
 </style>
