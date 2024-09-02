@@ -36,14 +36,14 @@ onMounted(() => {
 
       <!-- Horizontal menu -->
       <div class="mr-0 md:mr-4">
-        <div class="hidden md:block md:flex md:justify-between md:bg-menu">
+        <div class="hidden xl:block md:flex xl:justify-between xl:bg-menu">
           <div
-            class="flex hidden md:flex md:items-center order-3 md:order-1"
+            class="flex hidden xl:flex xl:items-center order-3 xl:order-1"
             id="menu"
           >
             <nav>
               <ul
-                class="md:flex h-full items-center justify-between text-base text-white"
+                class="xl:flex h-full items-center justify-between text-base text-white"
               >
                 <template v-for="menu in menus" :key="menu.id">
                   <li v-if="menu?.display !== 'hide-for-large'">
@@ -59,8 +59,8 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="items-center mr-2 md:ml-0">
-        <label for="menu-toggle" class="cursor-pointer md:hidden block">
+      <div class="items-center mr-2 xl:ml-0">
+        <label for="menu-toggle" class="cursor-pointer xl:hidden block">
           <button
             class="text-customGreenDark"
             aria-label="Open Menu"
