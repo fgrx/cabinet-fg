@@ -24,9 +24,15 @@ export const getStaticPaths = (async() => {
 const { Content } = Astro.props.page;
 const { title, imgSrc } = Astro.props.page.frontmatter;
 
-const images = import.meta.glob("../assets/img/*");
-const imageToFind=imgSrc.replace("../../","../")
-const imageBanner = images[imageToFind]();
+let imageBanner:Promise<{ default: ImageMetadata; }>|false = false;
+
+if(imgSrc){
+  const images = import.meta.glob("../assets/img/*");
+  const imageToFind=imgSrc.replace("../../","../")
+  const imageFound = images[imageToFind]();
+  imageBanner = imageFound as Promise<{ default: ImageMetadata; }>;
+}
+ 
 ---
 
 <Layout title={title}>
@@ -34,17 +40,17 @@ const imageBanner = images[imageToFind]();
     <div class="container mx-auto px-2 py-6">
       <h1>{title}</h1>
       
-      <div class="h-80">
+      {imgSrc && (<div class="h-80">
         <Image class="object-cover w-full h-full" src={imageBanner}  format="webp" width="1400" height="400" alt="illustration de l'article" />
-      </div>
-
+      </div>)
+      }
       <Content />
     </div>
   </article>
 </Layout>
 
 <style is:global>
-  h1{font-size:3em; font-weight: bolder; border-bottom: 1px solid rgb(158, 158, 158); margin-bottom:.5em;}
+  h1{font-size:3em; font-weight: bolder;}
   h2{font-size:2em;margin-top:1em;}
   h3{font-size:1.5em;margin-bottom:.5em;margin-top:.7em}
 </style>

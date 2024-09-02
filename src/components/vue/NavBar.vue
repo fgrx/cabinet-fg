@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import generalInfos from "../../content/general.json";
-import menus from "../../content/menu.json";
+import generalInfos from "../../content/params/general.json";
+import menus from "../../content/params/menu.json";
 
 const isOpen = ref(false);
 
