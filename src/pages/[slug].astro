@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
 
 export const getStaticPaths = (async() => {
  const pages = await Astro.glob("../content/**/*.md*") as any[];
@@ -21,12 +22,22 @@ export const getStaticPaths = (async() => {
 });
 
 const { Content } = Astro.props.page;
-const { title } = Astro.props.page.frontmatter;
+const { title, imgSrc } = Astro.props.page.frontmatter;
+
+const images = import.meta.glob("../assets/img/*");
+const imageToFind=imgSrc.replace("../../","../")
+const imageBanner = images[imageToFind]();
 ---
 
 <Layout title={title}>
   <article>
     <div class="container mx-auto px-2 py-6">
+      <h1>{title}</h1>
+      
+      <div class="h-80">
+        <Image class="object-cover w-full h-full" src={imageBanner}  format="webp" width="1400" height="400" alt="illustration de l'article" />
+      </div>
+
       <Content />
     </div>
   </article>
