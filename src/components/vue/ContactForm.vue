@@ -42,6 +42,8 @@ export default {
   methods: {
     async sendMessage() {
       if (this.isFormCompleted) {
+        event.preventDefault();
+
         const formData = {
           "form-name": "contact",
           name: this.name,
@@ -50,7 +52,8 @@ export default {
         };
 
         try {
-          const res = await fetch("/", {
+
+          await fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             formData,
@@ -102,6 +105,7 @@ export default {
           name="contact"
           method="POST"
           netlify
+          data-netlify=true
         >
           <p class="mt-5">
             <label class="block font-semibold"
@@ -147,7 +151,6 @@ export default {
               >
 
             </div>
-            
           </p>
         </form>
       </div>
