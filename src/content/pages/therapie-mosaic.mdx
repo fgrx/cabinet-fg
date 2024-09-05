@@ -1,10 +1,12 @@
 ---
 title: "Comment la thérapie Mosaic peut-elle m'aider à aller mieux ?"
 slug: "therapie-mosaic"
-imgSrc: "../../assets/img/mosaic-banner.jpg"
+imgSrc: "../../assets/img/eye.jpg"
 ---
 
 import Btn from "../../components/vue/Btn.vue";
+import { Image } from "astro:assets";
+import barreEmdr from "/src/assets/img/barre-emdr.jpg";
 
 ## Qu'est-ce que la thérapie Mosaic ?
 
@@ -13,6 +15,14 @@ C'est une thérapie développée par Stéphanie Khalfa qui mélange l'approche o
 Stéphanie est chercheuse au CNRS et psychothérapeute, ce qui lui permet d'avoir une vision scientifique de la thérapie et de l'évaluation de son efficacité.
 
 Elle s'est formée à l'EMDR dont elle a pu évaluer l'efficacité dans de nombreux champs de la psychothérapie et notamment dans la prise en charge des traumas. Elle est aussi spécialiste des thérapies orientées solution et de l'hypnose, dont on retrouve des traces dans Mosaic.
+
+<Image
+  src={barreEmdr}
+  width="500"
+  format="webp"
+  alt="Barre de traitement EMDR"
+  class="mt-8 ml-8 hidden md:block md:float-right"
+/>
 
 ## EMDR et Thérapie Mosaic, qu’elles sont les différences ?
 
@@ -28,6 +38,18 @@ Mais qu'en est-il de l'efficacité ? Les études tendent à montrer que la thér
 <a target="blank" href="www.mdpi.com/2227-9032/11/15/2226/pdf">
   <Btn>Sources de l'étude</Btn>
 </a>
+
+### Découvrez la thérapie Mosaic en Podcast
+
+Voici un interview de Stéphanie Khalfa, la créatrice de cette approche. Vous comprendrez comment cette thérapie fonctionne, à quels types de public elle s'adresse et sur quelles problématiques elle aider.
+
+    <iframe
+      src="https://podcasters.spotify.com/pod/show/catherine-la-psy/embed/episodes/La-thrapie-Mosaic--une-alternative-douce--lEMDR-e2iqvvv/a-ab70b6g"
+      height="102px"
+      width="400px"
+      frameborder="0"
+      scrolling="no"
+    ></iframe>
 
 ## Que peut-on traiter avec cette thérapie ?
 
