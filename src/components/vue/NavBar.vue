@@ -17,7 +17,16 @@ onMounted(() => {
 <template>
   <div class="w-full mb-70 shadow-lg bg-primary menu-site">
     <!-- logo part -->
-    <div class="container mx-auto flex items-center">
+    <div class="container mx-auto flex items-center content-start">
+      <div class="">
+        <a href="/">
+          <img
+            :src="'/img/logo_therapiefgx.svg'"
+            alt="Logo du site"
+            class="w-28 md:w-16"
+          />
+        </a>
+      </div>
       <div class="flex-auto mt-0">
         <a href="/">
           <div class="items-center">
