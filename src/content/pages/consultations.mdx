@@ -7,36 +7,45 @@ import { Image } from "astro:assets";
 import Btn from "../../components/vue/Btn.vue";
 import ContactForm from "../../components/vue/ContactForm.vue";
 import GallerieCabinet from "../../components/GallerieCabinet.astro";
-import cabinet from "../../assets/img/cabinet2.jpg";
+import cabinet from "../../assets/img/cab.jpg";
+import entreecab from "../../assets/img/entreecab.png";
 
 <section>
-    ## Les séances
+  <div class="md:flex ">
 
-    Mon cabinet est ouvert de 09h00 à 19h00 les mardis et mercredis en présentiel et le jeudi en visio.
+    <div class="basis-1/2">
+      ## Les séances
 
-    Les séances durent entre 50 et 55 minutes au tarif unique de 65€.
+      Mon cabinet est ouvert de 09h00 à 19h00 les mardis et mercredis en présentiel et le jeudi en visio.
 
-    Le règlement se fait par chèque, espèces ou virement bancaire. <u>La carte bancaire n'est pas acceptée</u>.
+      Les séances durent entre 50 et 55 minutes au tarif unique de 65€.
 
-    ### Comment se passent les séances ?
+      Le règlement se fait par chèque, espèces ou virement bancaire. <u>La carte bancaire n'est pas acceptée</u>.
 
-    Elles débutent par une phase d'entretien qui permettra de cerner votre problème et de définir un objectif concret à travailler. Puis, nous allons travailler ensemble pour résoudre vos problèmes que ce soit avec l'hypnose ou la thérapie Mosaic.
+      ### Comment se passent les séances ?
 
-    Avant de prendre rendez-vous, je vous invite à consulter ma charte et mes conditions d'utilisations.
+      Elles débutent par une phase d'entretien qui permettra de cerner votre problème et de définir un objectif concret à travailler. Puis, nous allons travailler ensemble pour résoudre vos problèmes que ce soit avec l'hypnose ou la thérapie Mosaic.
 
-    <div class="mb-12 text-center md:text-left"><a href="/cgu"><Btn>☑️ Charte & Conditions d'utilisation</Btn></a></div>
+      Avant de prendre rendez-vous, je vous invite à consulter ma charte et mes conditions d'utilisations.
 
-    ### Est-ce que les séances sont remboursées ?
+      <div class="mb-12 text-center md:text-left"><a href="/cgu"><Btn>☑️ Charte & Conditions d'utilisation</Btn></a></div>
 
-    Certaines mutuelles prennent en charge plusieurs séances. Renseignez-vous auprès de votre mutuelle.
+      ### Est-ce que les séances sont remboursées ?
 
+      Certaines mutuelles prennent en charge plusieurs séances. Renseignez-vous auprès de votre mutuelle.
+
+  </div>
+
+  <div class="basis-1/2 pt-10 md:pr-4">
+      <Image class="object-cover w-full rounded-lg" src={cabinet} format="webp" alt="Photo du cabinet" />
+    </div>
+  </div>
 </section>
 
 <section>
 <div class="md:flex md:flex-row-reverse">
 
   <div class=" basis-1/2">
-    <section>
         ## Le cabinet
 
         Le cabinet se situe au  <br />
@@ -51,12 +60,10 @@ import cabinet from "../../assets/img/cabinet2.jpg";
           </a>
         </div>
 
-      </section>
-
   </div>
 
   <div class="basis-1/2 pt-10 md:pr-4">
-    <Image class="object-cover w-full rounded-lg" src={cabinet} format="webp" alt="Photo du cabinet" />
+    <Image class="object-cover w-full rounded-lg" src={entreecab} format="webp" alt="Photo du cabinet" />
   </div>
 </div>
 
