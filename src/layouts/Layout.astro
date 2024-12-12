@@ -4,6 +4,7 @@ import NavBar from "../components/vue/NavBar.vue";
 import menus from "../content/params/menu.json";
 import generalInfos from "../content/params/general.json"
 import Footer from "../components/Footer.astro";
+import ContactFabButton from "../components/vue/ContactFabButton.vue";
 
 export interface Props {
   title: string;
@@ -45,7 +46,7 @@ const fonts ="https://fonts.googleapis.com/css2?family=Average+Sans&family=Monts
     />
 
     <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-FVZCQPQSE8"></script>
-    <script type="text/partytown">
+    <script type="text/partytown" data-cookiecategory="analytics">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -60,28 +61,18 @@ const fonts ="https://fonts.googleapis.com/css2?family=Average+Sans&family=Monts
     <NavBar client:load siteUrl="/" menus={menus} generalInfos={generalInfos} />
     <slot />
 
+    <ContactFabButton client:load />
+
     <Footer />
   </body>
 </html>
 
 <style is:global>
-  .title-site {
+  .menu-site li {
     font-family: "Montserrat";
     text-transform: uppercase;
-    font-weight:bold;
-    font-size:1.2em;
-  }
-
-  .subtitle-site {
-    font-family: "Lora";
-    font-weight:normal;
-  }
-
-  .menu-site li{
-    font-family: "Montserrat";
-    text-transform: uppercase;
-    font-weight:normal;
-    font-size:1.2em;
+    font-weight: normal;
+    font-size: 1.2em;
   }
 
   body {

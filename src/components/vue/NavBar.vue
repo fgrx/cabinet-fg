@@ -18,25 +18,19 @@ onMounted(() => {
   <div class="w-full mb-70 shadow-lg bg-primary menu-site">
     <!-- logo part -->
     <div class="container mx-auto flex items-center content-start">
-      <div class="">
-        <a href="/">
-          <img
-            :src="'/img/logo_therapiefgx.svg'"
-            alt="Logo du site"
-            class="w-28 md:w-16"
-          />
-        </a>
-      </div>
       <div class="flex-auto mt-0">
         <a href="/">
           <div class="items-center">
             <div class="ml-4 my-3 text-white">
-              <span class="title-site text-xl font-bold">
+              <span class="title-site text-2xl font-bold">
                 {{ generalInfos.title }}
               </span>
               <br />
-              <span class="subtitle-site text-lg">
-                {{ generalInfos.subtitle }}
+              <span class="subtitle-site text-xl">
+                {{ generalInfos.subtitle }} </span
+              ><br />
+              <span class="subtitle-site2 text-lg">
+                {{ generalInfos.subtitle2 }}
               </span>
             </div>
           </div>
@@ -147,5 +141,22 @@ li {
 ul {
   margin: 0;
   padding: 0;
+}
+
+.title-site {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.subtitle-site {
+  font-family: "Montserrat";
+  font-weight: semi-bold;
+}
+
+.subtitle-site2 {
+  font-family: "Lora";
+  font-weight: normal;
 }
 </style>

@@ -86,7 +86,7 @@ export default {
   <div class="mt-5">
     <transition name="slide">
       <div>
-        <Alert v-if="isSent" type="success" title="Message envoyé"
+        <Alert v-if="isSent" type="success" title="Message envoyé" class="my-4"
           >Merci pour votre message, nous nous efforcerons de vous répondre le
           plus rapidement possible.</Alert
         >
@@ -145,7 +145,6 @@ export default {
                 @click="sendMessage"
                 textColor="light"
                 typeButton="button"
-                
                 :disabled="!isFormCompleted"
                 >Envoyer</Btn
               >
