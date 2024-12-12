@@ -6,7 +6,9 @@ import sitemap from "@astrojs/sitemap";
 
 import tailwind from "@astrojs/tailwind";
 
+import partytown from "@astrojs/partytown";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue(), mdx(), icon(), sitemap(), tailwind()],
+  integrations: [vue(), mdx(), icon(), sitemap(), tailwind(), partytown()],
 });
