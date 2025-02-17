@@ -1,11 +1,11 @@
 [
   {
-    "title": "Prendre rendez-vous",
-    "url": "/prendre-rdv"
-  },
-  {
     "title": "Consultations",
     "url": "/consultations"
+  },
+  {
+    "title": "rendez-vous",
+    "url": "/prendre-rdv"
   },
   {
     "title": "Hypnose",
