@@ -1,5 +1,5 @@
 ---
-title: "Prendre rendez-vous"
+title: "Consultations"
 slug: "consultations"
 ---
 
@@ -9,11 +9,21 @@ import ContactForm from "../../components/vue/ContactForm.vue";
 import GallerieCabinet from "../../components/GallerieCabinet.astro";
 import cabinet from "../../assets/img/cab.jpg";
 import entreecab from "../../assets/img/entreecab.png";
+import CalendarVisio from "../../components/CalendarVisio.astro";
+import CalendarPresentiel from "../../components/CalendarPresentiel.astro";
 
 <section>
   <div class="md:flex ">
 
     <div class="basis-1/2">
+      ## Prendre rendez-vous
+
+      Pour prendre rendez-vous en ligne, par mail ou par téléphone, cliquez sur le bouton suivant :
+
+      <div class="mb-12 text-center md:text-left"><a href="/prendre-rdv"><Btn>📆 Prendre rendez-vous</Btn></a></div>
+
+
+
       ## Les séances
 
       Mon cabinet est ouvert de 09h00 à 19h00 les mardis et mercredis en présentiel et le jeudi en visio.
@@ -22,7 +32,7 @@ import entreecab from "../../assets/img/entreecab.png";
 
       Le règlement se fait par chèque, espèces ou virement bancaire. <u>La carte bancaire n'est pas acceptée</u>.
 
-      ### Comment se passent les séances ?
+      ### Comment se déroulent les séances ?
 
       Elles débutent par une phase d'entretien qui permettra de cerner votre problème et de définir un objectif concret à travailler. Puis, nous allons travailler ensemble pour résoudre vos problèmes que ce soit avec l'hypnose ou la thérapie Mosaic.
 
@@ -67,27 +77,4 @@ import entreecab from "../../assets/img/entreecab.png";
   </div>
 </div>
 
-</section>
-
-<section>
-  <div class="md:flex mt-10">
-    <div class="basis-1/2">
-          ## Prendre rendez-vous par mail
-
-          <ContactForm client:load />
-    </div>
-
-    <div class="basis-1/2 md:pl-12">
-      ## Prendre rendez-vous par téléphone
-
-        Vous pouvez me contacter au 07.66.83.65.71.
-
-        <div class="text-center md:text-left">
-          <a href="tel:07.66.83.65.71">
-            <Btn>📞 Me téléphoner ou m'envoyer un SMS</Btn>
-          </a>
-        </div>
-    </div>
-
-  </div>
 </section>

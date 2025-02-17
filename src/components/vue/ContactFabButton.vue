@@ -41,6 +41,21 @@ const toggleModal = () => (showModal.value = !showModal.value);
         <!--body-->
         <div class="px-6 pt-2 flex-auto items-start">
           <div>
+            <h3 class="text-2xl font-semibold">Prendre rendez-vous en ligne</h3>
+            <p>
+              Vous pouvez choisir votre rendez-vous en ligne. Un message de
+              confirmation vous sera ensuite envoyé.
+            </p>
+
+            <div class="text-center md:text-left">
+              <a href="https://cal.com/fabiengrignoux" target="blank">
+                <Btn client:load color="primary">📆 Rendez-vous en ligne</Btn>
+              </a>
+            </div>
+          </div>
+          <hr class="my-10" />
+
+          <div>
             <h3 class="text-2xl font-semibold">
               Prendre rendez-vous par téléphone
             </h3>

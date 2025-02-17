@@ -1,0 +1,63 @@
+---
+title: "Prendre rendez-vous"
+slug: "prendre-rdv"
+---
+
+import { Image } from "astro:assets";
+import Btn from "../../components/vue/Btn.vue";
+import ContactForm from "../../components/vue/ContactForm.vue";
+import GallerieCabinet from "../../components/GallerieCabinet.astro";
+import cabinet from "../../assets/img/cab.jpg";
+import entreecab from "../../assets/img/entreecab.png";
+import CalendarVisio from "../../components/CalendarVisio.astro";
+import CalendarPresentiel from "../../components/CalendarPresentiel.astro";
+
+<section>
+    ## Prendre rendez-vous en ligne
+  
+        ### Prendre rendez-vous en présentiel
+        **Les mardis et mercredis de 09h00 à 19h00**  
+        Les rendez-vous auront lieu au 314 rue Philippe Tassier à Optevoz - 38460
+
+        <div class="text-center md:text-left">
+          <a href="https://cal.com/fabiengrignoux/seance-de-therapie" target="blank">
+            <Btn>🗓️ Prendre rendez-vous en présentiel</Btn>
+          </a>
+        </div>
+
+<div class="mt-16"></div>
+
+      ### Prendre rendez-vous en visio
+      **Les jeudis de 09h00 à 19h00**<br />
+      Les rendez-vous se dérouleront sur Zoom. Un lien de connexion vous sera envoyé par mail.
+
+        <div class="text-center md:text-left">
+          <a href="https://cal.com/fabiengrignoux/seance-de-therapie-en-visio" target="blank">
+            <Btn>🗓️ Prendre rendez-vous en visio</Btn>
+          </a>
+        </div>
+
+</section>
+
+<section>
+  <div class="md:flex mt-10">
+    <div class="basis-1/2">
+          ## Prendre rendez-vous par mail
+
+          <ContactForm client:load />
+    </div>
+
+    <div class="basis-1/2 md:pl-12">
+      ## Prendre rendez-vous par téléphone
+
+        Vous pouvez me contacter au 07.66.83.65.71.
+
+        <div class="text-center md:text-left">
+          <a href="tel:07.66.83.65.71">
+            <Btn>📞 Me téléphoner ou m'envoyer un SMS</Btn>
+          </a>
+        </div>
+    </div>
+
+  </div>
+</section>
