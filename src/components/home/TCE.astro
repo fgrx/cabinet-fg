@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import illustration from "../../assets/img/tcelong.png";
+import Btn from "../vue/Btn.vue";
+---
+
+<section>
+  <div
+    class="container mx-auto md:flex md:flex-row-reverse mt-20 mb-16 items-center"
+  >
+    <div class="md:-ml-12 basis-1/2">
+      <!-- <Image class="-rotate-3 border-4 border-white" src={imageHypnose} height="600" format="webp" alt="Thérapie Mosaic" />  -->
+      <Image
+        class="mx-auto md:mx-0 xs:h-64 w-auto rotate-3 border-4 border-white"
+        src={illustration}
+        height="400"
+        format="webp"
+        alt="Thérapie Mosaic"
+      />
+    </div>
+
+    <div class="bg-primary text-white px-4 -mt-4 py-8 my-8 md:px-16 md:-ml-8">
+      <h2 class="text-3xl md:text-4xl text-center md:text-left pb-2">
+        Thérapie Centrée sur les émotions (TCE)
+      </h2>
+      <p>
+        Les études scientifiques sont formelless : trouver l'origine et
+        comprendre ses problèmes n'est hélas pas suffisant pour guérir. Il faut
+        surtout vivre le changement et l'expérimenter.
+      </p>
+      <p>
+        C'est pour cela que la TCE est une thérapie si efficace : en utilisant
+        les émotions en séances, elle permet d'expérimenter et vivre le
+        changement.
+      </p>
+      <p>
+        De nombreuses recherches ont montré son efficacité sur :
+        <ul>
+          <li>La gestion émotionnelle</li>
+          <li>Les addictions</li>
+          <li>Les traumas</li>
+          <li>La compréhension et acceptation de soi</li>
+          <li>L'Anxiété</li>
+          <li>Les troubles de l'attachement</li>
+        </ul>
+      </p>
+      <div class="text-center">
+        <a href="/tce"
+          ><Btn color="lightBtn" textColor="primary">La TCE à mon cabinet</Btn
+          ></a
+        >
+      </div>
+    </div>
+  </div>
+</section>
